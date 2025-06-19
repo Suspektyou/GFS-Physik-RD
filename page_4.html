@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Konventionelle Kraftwerke: Kohle &amp; Gas</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        body {width: 1280px; height: 832px; font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            position: relative;
+            width: 1280px;
+            min-height: 832px;
+            
+            background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        .title-bar {
+            background: linear-gradient(90deg, #007bff 0%, #28a745 100%);
+        }
+        .content-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .coal-section {
+            background: linear-gradient(to bottom right, rgba(108, 117, 125, 0.1), rgba(52, 58, 64, 0.2));
+        }
+        .gas-section {
+            background: linear-gradient(to bottom right, rgba(0, 123, 255, 0.1), rgba(13, 202, 240, 0.2));
+        }
+        .step-circle {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+        .coal-step {
+            background-color: #6c757d;
+        }
+        .gas-step {
+            background-color: #0dcaf0;
+        }
+    </style>
+</head>
+<body>
+<div class="slide p-8">
+<!-- Title Bar -->
+<div class="title-bar py-4 px-8 rounded-lg mb-6">
+<h1 class="text-4xl font-bold text-white">Konventionelle Kraftwerke: Kohle &amp; Gas</h1>
+</div>
+<!-- Main Content Area -->
+<div class="grid grid-cols-2 gap-6">
+<!-- Left Column - Coal Power Plants -->
+<div class="content-box coal-section p-5">
+<div class="flex items-center mb-4">
+<i class="fas fa-industry text-3xl text-gray-700 mr-3"></i>
+<h2 class="text-2xl font-semibold">Kohlekraftwerke</h2>
+</div>
+<p class="mb-3"><span class="font-medium">Brennstoff:</span> Stein- oder Braunkohle</p>
+<h3 class="text-lg font-medium mb-2">Funktionsweise:</h3>
+<div class="flex items-start mb-2">
+<div class="step-circle coal-step mr-3 mt-1">1</div>
+<p>Die Kohle wird zu feinem Staub gemahlen und in einem großen Kessel verbrannt.</p>
+</div>
+<div class="flex items-start mb-2">
+<div class="step-circle coal-step mr-3 mt-1">2</div>
+<p>Durch die Hitze der Verbrennung wird Wasser in Rohren erhitzt, bis es zu heißem Wasserdampf wird.</p>
+</div>
+<div class="flex items-start mb-2">
+<div class="step-circle coal-step mr-3 mt-1">3</div>
+<p>Der Wasserdampf strömt mit hohem Druck auf die Schaufeln einer Turbine und bringt diese zum Drehen.</p>
+</div>
+<div class="flex items-start mb-4">
+<div class="step-circle coal-step mr-3 mt-1">4</div>
+<p>Die Turbine ist mit einem Generator verbunden, der die Drehbewegung in elektrische Energie umwandelt.</p>
+</div>
+<div class="bg-gray-100 p-3 rounded-md">
+<p class="text-sm"><i class="fas fa-info-circle text-gray-700 mr-1"></i> <span class="font-medium">Abgase:</span> Bei der Verbrennung von Kohle entstehen Abgase, die gereinigt werden müssen. Die großen Türme, die man oft bei Kohlekraftwerken sieht, sind Kühltürme, aus denen Wasserdampf aufsteigt.</p>
+</div>
+</div>
+<!-- Right Column - Gas Power Plants -->
+<div class="content-box gas-section p-5">
+<div class="flex items-center mb-4">
+<i class="fas fa-burn text-3xl text-blue-500 mr-3"></i>
+<h2 class="text-2xl font-semibold">Gaskraftwerke</h2>
+</div>
+<p class="mb-3"><span class="font-medium">Brennstoff:</span> Erdgas</p>
+<h3 class="text-lg font-medium mb-2">Funktionsweise:</h3>
+<div class="flex items-start mb-2">
+<div class="step-circle gas-step mr-3 mt-1">1</div>
+<p>Erdgas wird in einer Brennkammer verbrannt.</p>
+</div>
+<div class="flex items-start mb-2">
+<div class="step-circle gas-step mr-3 mt-1">2</div>
+<p>Die heißen Gase, die bei der Verbrennung entstehen, treiben direkt eine Gasturbine an (ähnlich wie ein Flugzeugtriebwerk).</p>
+</div>
+<div class="flex items-start mb-4">
+<div class="step-circle gas-step mr-3 mt-1">3</div>
+<p>Die Gasturbine ist mit einem Generator gekoppelt, der die Drehbewegung in Strom umwandelt.</p>
+</div>
+<div class="bg-blue-50 p-3 rounded-md mb-3">
+<p class="text-sm"><i class="fas fa-lightbulb text-blue-500 mr-1"></i> <span class="font-medium">GuD-Kraftwerke:</span> Moderne Gaskraftwerke nutzen die heißen Abgase der Gasturbine, um zusätzlich Wasser zu verdampfen. Dieser Dampf treibt eine weitere Dampfturbine an. Das erhöht den Wirkungsgrad des Kraftwerks.</p>
+</div>
+<div class="bg-yellow-50 p-2 rounded-md">
+<p class="text-sm"><i class="fas fa-star text-yellow-500 mr-1"></i> Gaskraftwerke gelten als flexibler als Kohlekraftwerke und können schneller auf Strombedarf reagieren.</p>
+</div>
+</div>
+</div>
+<!-- Bottom Image Section -->
+<div class="mt-4 flex justify-center">
+<div class="relative">
+<img alt="Kohlekraftwerk mit Kühltürmen" class="h-200 rounded-md shadow-md" src="https://picture-search.skywork.ai/aippt/image/sheet/137b9b2d2ff5a8ba883d4aa385f4f8bd.jpg" style="height: 180px; object-fit: cover;"/>
+<div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white text-center text-sm py-1">
+                    Kohlekraftwerk mit charakteristischen Kühltürmen
+                </div>
+</div>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-8">
+<span class="text-lg font-medium text-gray-600">4/12</span>
+</div>
+</div>
+
+</body></html>

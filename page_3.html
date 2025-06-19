@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arten von Kraftwerken: Der Überblick</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        body {width: 1280px; height: 720px; font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            position: relative;
+            width: 1280px;
+            min-height: 720px;
+            
+            background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        .title-bar {
+            background: linear-gradient(90deg, #007bff 0%, #28a745 100%);
+        }
+        .conventional {
+            background: linear-gradient(135deg, #007bff 0%, #6c757d 100%);
+        }
+        .renewable {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        }
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px auto;
+            transition: all 0.3s ease;
+        }
+        .icon-circle:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .power-type {
+            transition: all 0.3s ease;
+        }
+        .power-type:hover {
+            transform: translateY(-5px);
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+<div class="slide p-8">
+<!-- Title Bar -->
+<div class="title-bar py-4 px-8 rounded-lg mb-8">
+<h1 class="text-4xl font-bold text-white">Arten von Kraftwerken: Der Überblick</h1>
+</div>
+<!-- Introduction Text -->
+<div class="text-center mb-8">
+<p class="text-xl">Kraftwerke lassen sich grob in zwei Hauptkategorien einteilen:</p>
+</div>
+<!-- Two Main Categories -->
+<div class="grid grid-cols-2 gap-8 mb-6">
+<!-- Conventional Power Plants -->
+<div class="card p-6">
+<div class="conventional text-white rounded-lg p-4 mb-4">
+<h2 class="text-2xl font-bold text-center">Konventionelle Kraftwerke</h2>
+<p class="text-center">Nutzen fossile Brennstoffe oder Kernenergie</p>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<!-- Coal Power Plant -->
+<div class="power-type text-center p-3">
+<div class="icon-circle bg-gray-200">
+<i class="fas fa-industry text-4xl text-gray-700"></i>
+</div>
+<h3 class="text-lg font-semibold">Kohlekraftwerke</h3>
+<p class="text-sm">Verbrennen Stein- oder Braunkohle</p>
+</div>
+<!-- Gas Power Plant -->
+<div class="power-type text-center p-3">
+<div class="icon-circle bg-gray-200">
+<i class="fas fa-fire-flame-simple text-4xl text-blue-500"></i>
+</div>
+<h3 class="text-lg font-semibold">Gaskraftwerke</h3>
+<p class="text-sm">Verbrennen Erdgas</p>
+</div>
+<!-- Nuclear Power Plant -->
+<div class="power-type text-center p-3">
+<div class="icon-circle bg-gray-200">
+<i class="fas fa-atom text-4xl text-red-500"></i>
+</div>
+<h3 class="text-lg font-semibold">Kernkraftwerke</h3>
+<p class="text-sm">Nutzen Kernspaltung</p>
+</div>
+</div>
+<div class="bg-blue-50 border-l-4 border-blue-500 p-3 mt-4">
+<p class="text-sm">
+                        Diese Kraftwerke verwenden meist Energieträger, die bei ihrer Nutzung verbraucht werden.
+                    </p>
+</div>
+</div>
+<!-- Renewable Power Plants -->
+<div class="card p-6">
+<div class="renewable text-white rounded-lg p-4 mb-4">
+<h2 class="text-2xl font-bold text-center">Erneuerbare Energien</h2>
+<p class="text-center">Nutzen natürliche, unerschöpfliche Energiequellen</p>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<!-- Wind Power -->
+<div class="power-type text-center p-3">
+<div class="icon-circle bg-gray-200">
+<i class="fas fa-wind text-4xl text-blue-400"></i>
+</div>
+<h3 class="text-lg font-semibold">Windkraftwerke</h3>
+<p class="text-sm">Nutzen Windenergie</p>
+</div>
+<!-- Solar Power -->
+<div class="power-type text-center p-3">
+<div class="icon-circle bg-gray-200">
+<i class="fas fa-sun text-4xl text-yellow-500"></i>
+</div>
+<h3 class="text-lg font-semibold">Solarkraftwerke</h3>
+<p class="text-sm">Nutzen Sonnenlicht</p>
+</div>
+<!-- Hydro Power -->
+<div class="power-type text-center p-3">
+<div class="icon-circle bg-gray-200">
+<i class="fas fa-water text-4xl text-blue-600"></i>
+</div>
+<h3 class="text-lg font-semibold">Wasserkraftwerke</h3>
+<p class="text-sm">Nutzen fließendes Wasser</p>
+</div>
+</div>
+<div class="bg-green-50 border-l-4 border-green-500 p-3 mt-4">
+<p class="text-sm">
+                        Diese Kraftwerke greifen auf Energiequellen zurück, die praktisch unerschöpflich sind oder sich ständig erneuern.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Bottom Note -->
+<div class="text-center mt-2">
+<p class="text-lg">In den folgenden Folien schauen wir uns jede Kraftwerksart genauer an!</p>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-8">
+<span class="text-lg font-medium text-gray-600">3/12</span>
+</div>
+</div>
+
+</body></html>

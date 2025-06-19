@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wasserkraft: Strom aus fließendem Wasser</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        body {width: 1280px; height: 802px; font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            position: relative;
+            width: 1280px;
+            min-height: 802px;
+            
+            background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        .title-bar {
+            background: linear-gradient(90deg, #007bff 0%, #28a745 100%);
+        }
+        .content-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .process-step {
+            background-color: #007bff;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .type-box {
+            border-left: 4px solid #ffc107;
+            background-color: #fff8e1;
+        }
+    </style>
+</head>
+<body>
+<div class="slide p-8">
+<!-- Title Bar -->
+<div class="title-bar py-4 px-8 rounded-lg mb-6">
+<h1 class="text-4xl font-bold text-white">Wasserkraft: Strom aus fließendem Wasser</h1>
+</div>
+<!-- Main Content Area -->
+<div class="grid grid-cols-12 gap-6 h-5/6">
+<!-- Left Side - Text Content -->
+<div class="col-span-7">
+<div class="content-box p-6 h-full flex flex-col">
+<!-- How Hydropower Works -->
+<div class="mb-4">
+<h2 class="text-2xl font-semibold mb-3 text-blue-600">
+<i class="fas fa-water mr-2"></i>So funktioniert ein Wasserkraftwerk:
+                        </h2>
+<!-- Process Steps -->
+<div class="flex items-start mb-3">
+<div class="process-step mr-3">1</div>
+<p class="text-lg">Wasser wird durch Rohre oder Kanäle zu einer Turbine geleitet. Bei Speicherkraftwerken wird Wasser oft durch einen Damm aufgestaut.</p>
+</div>
+<div class="flex items-start mb-3">
+<div class="process-step mr-3">2</div>
+<p class="text-lg">Die Kraft des strömenden Wassers trifft auf die Schaufeln der Turbine und bringt sie zum Drehen.</p>
+</div>
+<div class="flex items-start mb-5">
+<div class="process-step mr-3">3</div>
+<p class="text-lg">Die Turbine treibt einen Generator an, der die mechanische Energie in elektrische Energie umwandelt.</p>
+</div>
+</div>
+<!-- Types of Hydropower Plants -->
+<div class="mb-4">
+<h2 class="text-2xl font-semibold mb-3 text-blue-600">
+<i class="fas fa-th-list mr-2"></i>Arten von Wasserkraftwerken:
+                        </h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="type-box p-4">
+<h3 class="text-xl font-medium mb-2">Laufwasserkraftwerke</h3>
+<p>Nutzen die natürliche Strömung eines Flusses, ohne das Wasser in großen Mengen zu speichern.</p>
+</div>
+<div class="type-box p-4">
+<h3 class="text-xl font-medium mb-2">Speicherkraftwerke</h3>
+<p>Nutzen aufgestautes Wasser, das durch Dämme zurückgehalten wird und bei Bedarf Strom erzeugen kann.</p>
+</div>
+</div>
+</div>
+<!-- Efficiency Highlight -->
+<div class="mt-auto bg-blue-50 p-4 rounded-lg border border-blue-200 flex items-center">
+<i class="fas fa-bolt text-3xl text-yellow-500 mr-4"></i>
+<div>
+<h3 class="text-xl font-medium mb-1">Hoher Wirkungsgrad</h3>
+<p class="text-lg">Wasserkraftwerke können bis zu <span class="font-bold text-blue-600">90%</span> der Wasserenergie in Strom umwandeln - sie gehören damit zu den effizientesten Kraftwerken!</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side - Image and Energy Source -->
+<div class="col-span-5">
+<div class="content-box p-6 h-full flex flex-col">
+<!-- Image -->
+<div class="mb-6">
+<img alt="Wasserkraftwerk mit Staudamm" class="w-full h-64 object-cover rounded-lg shadow-lg" src="https://picture-search.skywork.ai/aippt/image/sheet/048e970c028019b1b2ac5cdad246e2a7.jpg"/>
+</div>
+<!-- Energy Source Box -->
+<div class="bg-green-50 p-4 rounded-lg border border-green-200 mb-4">
+<h3 class="text-xl font-medium mb-2 text-green-700">
+<i class="fas fa-leaf mr-2"></i>Energiequelle:
+                        </h3>
+<ul class="list-disc pl-6 space-y-2">
+<li>Bewegungsenergie (kinetische Energie) des fließenden Wassers</li>
+<li>Lageenergie (potenzielle Energie) von gestautem Wasser</li>
+</ul>
+</div>
+<!-- Advantages -->
+<div class="mt-auto">
+<h3 class="text-xl font-medium mb-2 text-blue-600">
+<i class="fas fa-plus-circle mr-2"></i>Vorteile:
+                        </h3>
+<ul class="space-y-2">
+<li class="flex items-center">
+<i class="fas fa-check-circle text-green-500 mr-2"></i>
+<span>Erneuerbare Energiequelle</span>
+</li>
+<li class="flex items-center">
+<i class="fas fa-check-circle text-green-500 mr-2"></i>
+<span>Keine CO₂-Emissionen im Betrieb</span>
+</li>
+<li class="flex items-center">
+<i class="fas fa-check-circle text-green-500 mr-2"></i>
+<span>Langlebige und zuverlässige Anlagen</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-8">
+<span class="text-lg font-medium text-gray-600">7/12</span>
+</div>
+</div>
+
+</body></html>

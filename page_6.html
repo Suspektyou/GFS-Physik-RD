@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Erneuerbare Energien: Wind &amp; Sonne</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        body {width: 1280px; height: 828px; font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            position: relative;
+            width: 1280px;
+            min-height: 828px;
+            
+            background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        .title-bar {
+            background: linear-gradient(90deg, #28a745 0%, #007bff 100%);
+        }
+        .content-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .step-circle {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        .wind-step {
+            background-color: #007bff;
+        }
+        .solar-step {
+            background-color: #ffc107;
+        }
+        .wind-section {
+            border-top: 4px solid #007bff;
+        }
+        .solar-section {
+            border-top: 4px solid #ffc107;
+        }
+    </style>
+</head>
+<body>
+<div class="slide p-8">
+<!-- Title Bar -->
+<div class="title-bar py-4 px-8 rounded-lg mb-6">
+<h1 class="text-4xl font-bold text-white">Erneuerbare Energien: Wind &amp; Sonne</h1>
+</div>
+<!-- Main Content Area -->
+<div class="grid grid-cols-2 gap-6">
+<!-- Wind Energy Section -->
+<div class="content-box wind-section p-5">
+<div class="flex items-center mb-3">
+<i class="fas fa-wind text-3xl text-blue-500 mr-3"></i>
+<h2 class="text-2xl font-semibold">Windkraftwerke</h2>
+</div>
+<!-- Wind Image -->
+<div class="mb-4 h-48 overflow-hidden rounded-lg">
+<img alt="Windkraftanlagen" class="w-full h-full object-cover" src="https://picture-search.skywork.ai/aippt/image/sheet/9a46f7ed2c042c2d79e6251f4d86cf4a.jpg"/>
+</div>
+<!-- Wind Energy Description -->
+<p class="mb-3">
+                    Windkraftwerke wandeln die <span class="font-semibold">Bewegungsenergie des Windes</span> in elektrischen Strom um.
+                </p>
+<!-- How Wind Power Works -->
+<h3 class="text-lg font-medium mb-2">So funktioniert&#39;s:</h3>
+<div class="flex items-start mb-2">
+<div class="step-circle wind-step mr-3 flex-shrink-0">1</div>
+<p>Der Wind trifft auf die Rotorblätter des Windrads und bringt sie zum Drehen.</p>
+</div>
+<div class="flex items-start mb-2">
+<div class="step-circle wind-step mr-3 flex-shrink-0">2</div>
+<p>Die Drehbewegung wird über eine Welle und oft ein Getriebe an einen Generator weitergeleitet.</p>
+</div>
+<div class="flex items-start mb-4">
+<div class="step-circle wind-step mr-3 flex-shrink-0">3</div>
+<p>Der Generator wandelt die mechanische Energie in elektrische Energie um.</p>
+</div>
+<!-- Wind Energy Facts -->
+<div class="bg-blue-50 p-3 rounded-lg">
+<h3 class="font-medium">Wusstest du schon?</h3>
+<ul class="list-disc ml-5">
+<li>Windräder können an Land (Onshore) oder im Meer (Offshore) stehen</li>
+<li>Der Wirkungsgrad liegt bei etwa 35-45%</li>
+</ul>
+</div>
+</div>
+<!-- Solar Energy Section -->
+<div class="content-box solar-section p-5">
+<div class="flex items-center mb-3">
+<i class="fas fa-sun text-3xl text-yellow-500 mr-3"></i>
+<h2 class="text-2xl font-semibold">Solarkraftwerke</h2>
+</div>
+<!-- Solar Image -->
+<div class="mb-4 h-48 overflow-hidden rounded-lg">
+<img alt="Solaranlage" class="w-full h-full object-cover" src="https://picture-search.skywork.ai/aippt/image/sheet/81a1abd0d777ee8b043690055c1ed74b.jpg"/>
+</div>
+<!-- Solar Energy Description -->
+<p class="mb-3">
+                    Solarkraftwerke nutzen die <span class="font-semibold">Energie der Sonnenstrahlung</span>, um Strom zu erzeugen.
+                </p>
+<!-- How Solar Power Works (Photovoltaik) -->
+<h3 class="text-lg font-medium mb-2">So funktioniert&#39;s (Photovoltaik):</h3>
+<div class="flex items-start mb-2">
+<div class="step-circle solar-step mr-3 flex-shrink-0">1</div>
+<p>Solarzellen wandeln Sonnenlicht direkt in elektrische Energie (Gleichstrom) um.</p>
+</div>
+<div class="flex items-start mb-2">
+<div class="step-circle solar-step mr-3 flex-shrink-0">2</div>
+<p>Ein Wechselrichter wandelt den erzeugten Gleichstrom in Wechselstrom um.</p>
+</div>
+<div class="flex items-start mb-4">
+<div class="step-circle solar-step mr-3 flex-shrink-0">3</div>
+<p>Der Strom kann ins Netz eingespeist oder direkt genutzt werden.</p>
+</div>
+<!-- Solar Energy Facts -->
+<div class="bg-yellow-50 p-3 rounded-lg">
+<h3 class="font-medium">Wusstest du schon?</h3>
+<ul class="list-disc ml-5">
+<li>Es gibt auch solarthermische Kraftwerke mit Spiegeln, die Sonnenlicht bündeln</li>
+<li>Der Wirkungsgrad von Solarzellen liegt bei etwa 15-22%</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-8">
+<span class="text-lg font-medium text-gray-600">6/12</span>
+</div>
+</div>
+
+</body></html>

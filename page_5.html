@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kernkraftwerke: Energie aus Atomkernen</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        body {width: 1280px; height: 800px; font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            position: relative;
+            width: 1280px;
+            min-height: 800px;
+            
+            background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        .title-bar {
+            background: linear-gradient(90deg, #007bff 0%, #28a745 100%);
+        }
+        .content-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .process-step {
+            border-left: 3px solid #007bff;
+            padding-left: 20px;
+            position: relative;
+        }
+        .process-step:before {
+            content: "";
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #007bff;
+        }
+        .special-feature {
+            background-color: rgba(255, 193, 7, 0.15);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide p-8">
+<!-- Title Bar -->
+<div class="title-bar py-4 px-8 rounded-lg mb-6">
+<h1 class="text-4xl font-bold text-white">Kernkraftwerke: Energie aus Atomkernen</h1>
+</div>
+<!-- Main Content Area -->
+<div class="grid grid-cols-12 gap-6 h-5/6">
+<!-- Left Side - Process Explanation -->
+<div class="col-span-7">
+<div class="content-box p-6 h-full">
+<h2 class="text-2xl font-semibold mb-4 text-blue-600">So funktioniert ein Kernkraftwerk:</h2>
+<div class="space-y-5 mt-6">
+<!-- Step 1 -->
+<div class="process-step pb-4">
+<h3 class="text-xl font-medium mb-2">Kernspaltung</h3>
+<p>Im Kernreaktor findet eine kontrollierte <span class="font-semibold">Kernspaltung</span> statt. Dabei werden Atomkerne von Uran gespalten, wodurch sehr viel Wärmeenergie freigesetzt wird.</p>
+</div>
+<!-- Step 2 -->
+<div class="process-step pb-4">
+<h3 class="text-xl font-medium mb-2">Wärmeerzeugung</h3>
+<p>Diese Wärme wird genutzt, um Wasser zu erhitzen und Wasserdampf zu erzeugen.</p>
+</div>
+<!-- Step 3 -->
+<div class="process-step pb-4">
+<h3 class="text-xl font-medium mb-2">Turbine antreiben</h3>
+<p>Der Wasserdampf treibt, ähnlich wie im Kohlekraftwerk, eine Turbine an, die sich schnell dreht.</p>
+</div>
+<!-- Step 4 -->
+<div class="process-step">
+<h3 class="text-xl font-medium mb-2">Stromerzeugung</h3>
+<p>Die Turbine ist mit einem Generator verbunden, der die Drehbewegung in elektrische Energie (Strom) umwandelt.</p>
+</div>
+</div>
+<!-- Brennstoff Info -->
+<div class="flex items-center mt-6 p-3 bg-blue-50 rounded-lg">
+<div class="mr-4 text-blue-500">
+<i class="fas fa-atom text-3xl"></i>
+</div>
+<div>
+<h3 class="text-lg font-medium">Brennstoff:</h3>
+<p>Meistens wird <span class="font-semibold">Uran</span> als Brennstoff verwendet</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side - Image and Special Features -->
+<div class="col-span-5">
+<div class="content-box p-6 h-full flex flex-col">
+<!-- Image -->
+<div class="mb-5">
+<img alt="Kernkraftwerk mit Kühlturm" class="w-full h-48 object-cover rounded-lg" src="https://picture-search.skywork.ai/aippt/image/sheet/89f8fdbe481e7973c5f7771ea1fffec2.jpg"/>
+<p class="text-sm text-gray-500 mt-1 text-center">Kernkraftwerk mit charakteristischem Kühlturm</p>
+</div>
+<!-- Special Features -->
+<h3 class="text-xl font-semibold mb-3 text-blue-600">Besonderheiten:</h3>
+<div class="space-y-4 flex-grow">
+<div class="special-feature p-3 flex items-start">
+<div class="mr-3 text-green-500 mt-1">
+<i class="fas fa-check-circle"></i>
+</div>
+<div>
+<p><span class="font-medium">Keine direkte CO₂-Emission</span> bei der Stromerzeugung, da keine Verbrennung stattfindet</p>
+</div>
+</div>
+<div class="special-feature p-3 flex items-start">
+<div class="mr-3 text-yellow-500 mt-1">
+<i class="fas fa-exclamation-triangle"></i>
+</div>
+<div>
+<p><span class="font-medium">Radioaktiver Abfall</span> entsteht und muss sicher gelagert werden</p>
+</div>
+</div>
+<div class="special-feature p-3 flex items-start">
+<div class="mr-3 text-blue-500 mt-1">
+<i class="fas fa-bolt"></i>
+</div>
+<div>
+<p><span class="font-medium">Hohe Energieausbeute</span>: Aus wenig Brennstoff wird viel Energie gewonnen</p>
+</div>
+</div>
+<div class="special-feature p-3 flex items-start">
+<div class="mr-3 text-purple-500 mt-1">
+<i class="fas fa-tachometer-alt"></i>
+</div>
+<div>
+<p><span class="font-medium">Wirkungsgrad</span> liegt bei etwa 33-35%</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-8">
+<span class="text-lg font-medium text-gray-600">5/12</span>
+</div>
+</div>
+
+</body></html>

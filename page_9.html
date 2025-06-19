@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wirkungsgrad im Vergleich</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        body {width: 1280px; height: 842px; font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;}
+        .slide {
+            position: relative;
+            width: 1280px;
+            min-height: 842px;
+            
+            background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        .title-bar {
+            background: linear-gradient(90deg, #007bff 0%, #28a745 100%);
+        }
+        .content-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .bar {
+            transition: width 1s ease-out;
+        }
+        .tooltip {
+            position: absolute;
+            padding: 8px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 4px;
+            pointer-events: none;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+    </style>
+</head>
+<body>
+<div class="slide p-8">
+<!-- Title Bar -->
+<div class="title-bar py-4 px-8 rounded-lg mb-6">
+<h1 class="text-4xl font-bold text-white">Wirkungsgrad im Vergleich</h1>
+</div>
+<!-- Main Content Area -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Left Column - Explanation -->
+<div class="col-span-5">
+<div class="content-box p-6 h-full">
+<h2 class="text-2xl font-semibold mb-4 text-blue-600">Was ist der Wirkungsgrad?</h2>
+<p class="text-lg mb-6">
+                        Der Wirkungsgrad gibt an, wie gut ein Kraftwerk die ursprüngliche Energie in Strom umwandeln kann.
+                    </p>
+<div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+<p class="flex items-center">
+<i class="fas fa-lightbulb text-yellow-500 text-xl mr-3"></i>
+<span class="text-lg">Ein hoher Wirkungsgrad bedeutet, dass viel von der ursprünglichen Energie zu Strom wird und wenig verloren geht.</span>
+</p>
+</div>
+<div class="mt-6">
+<h3 class="text-xl font-medium mb-3">Einfaches Beispiel:</h3>
+<p class="mb-2">
+<i class="fas fa-arrow-right text-green-500 mr-2"></i>
+                            Bei 45% Wirkungsgrad werden aus 100 Teilen Energie nur 45 Teile Strom.
+                        </p>
+<p>
+<i class="fas fa-arrow-right text-green-500 mr-2"></i>
+                            Der Rest (55 Teile) geht meist als Wärme verloren.
+                        </p>
+</div>
+<div class="mt-8 bg-blue-50 p-4 rounded-lg">
+<h3 class="text-xl font-medium mb-2 flex items-center">
+<i class="fas fa-info-circle text-blue-500 mr-2"></i>
+                            Warum ist der Wirkungsgrad wichtig?
+                        </h3>
+<ul class="list-disc pl-6">
+<li class="mb-1">Spart Brennstoffe (z.B. Kohle, Gas)</li>
+<li class="mb-1">Schont die Umwelt</li>
+<li>Macht Strom günstiger</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Right Column - Chart &amp; Table -->
+<div class="col-span-7">
+<div class="content-box p-6 h-full">
+<h2 class="text-2xl font-semibold mb-5 text-center">Wirkungsgrad verschiedener Kraftwerkstypen</h2>
+<!-- D3 Chart Container -->
+<div class="mb-4" id="chart" style="height: 280px;"></div>
+<!-- Table -->
+<div class="mt-6">
+<table class="min-w-full bg-white border border-gray-200">
+<thead>
+<tr class="bg-gray-100">
+<th class="py-2 px-4 border-b text-left">Kraftwerkstyp</th>
+<th class="py-2 px-4 border-b text-center">Wirkungsgrad</th>
+<th class="py-2 px-4 border-b text-left">Einfache Erklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="py-2 px-4 border-b font-medium">Wasserkraftwerk</td>
+<td class="py-2 px-4 border-b text-center">bis zu 90%</td>
+<td class="py-2 px-4 border-b">Spitzenreiter! Fast die gesamte Energie wird zu Strom.</td>
+</tr>
+<tr class="bg-gray-50">
+<td class="py-2 px-4 border-b font-medium">Gaskraftwerk (GuD)</td>
+<td class="py-2 px-4 border-b text-center">bis zu 60%</td>
+<td class="py-2 px-4 border-b">Ziemlich gut! Mehr als die Hälfte wird zu Strom.</td>
+</tr>
+<tr>
+<td class="py-2 px-4 border-b font-medium">Kohlekraftwerk</td>
+<td class="py-2 px-4 border-b text-center">bis zu 45%</td>
+<td class="py-2 px-4 border-b">Weniger als die Hälfte wird zu Strom.</td>
+</tr>
+<tr class="bg-gray-50">
+<td class="py-2 px-4 border-b font-medium">Solarkraftwerk (PV)</td>
+<td class="py-2 px-4 border-b text-center">ca. 15-22%</td>
+<td class="py-2 px-4 border-b">Nur ein kleiner Teil des Sonnenlichts wird zu Strom.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-8">
+<span class="text-lg font-medium text-gray-600">9/12</span>
+</div>
+<!-- Tooltip for the chart -->
+<div class="tooltip" id="tooltip"></div>
+</div>
+<script>
+        // Data for the chart based on the document
+        const data = [
+            { type: "Wasserkraftwerk", value: 90, color: "#3498db" },
+            { type: "Gaskraftwerk (GuD)", value: 60, color: "#e67e22" },
+            { type: "Kohlekraftwerk", value: 45, color: "#7f8c8d" },
+            { type: "Windkraftwerk", value: 45, color: "#2ecc71" },
+            { type: "Kernkraftwerk", value: 35, color: "#9b59b6" },
+            { type: "Solarkraftwerk (PV)", value: 22, color: "#f1c40f" }
+        ];
+
+        // Sort data by efficiency value (descending)
+        data.sort((a, b) => b.value - a.value);
+
+        // Set up the chart dimensions
+        const margin = { top: 20, right: 20, bottom: 40, left: 180 };
+        const width = 650 - margin.left - margin.right;
+        const height = 280 - margin.top - margin.bottom;
+
+        // Create SVG container
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Create tooltip
+        const tooltip = d3.select("#tooltip");
+
+        // Create scales
+        const xScale = d3.scaleLinear()
+            .domain([0, 100])
+            .range([0, width]);
+
+        const yScale = d3.scaleBand()
+            .domain(data.map(d => d.type))
+            .range([0, height])
+            .padding(0.3);
+
+        // Add x-axis
+        svg.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .call(d3.axisBottom(xScale)
+                .ticks(5)
+                .tickFormat(d => d + "%"))
+            .selectAll("text")
+            .style("font-size", "12px");
+
+        // Add x-axis label
+        svg.append("text")
+            .attr("text-anchor", "middle")
+            .attr("x", width / 2)
+            .attr("y", height + 35)
+            .style("font-size", "14px")
+            .text("Wirkungsgrad in %");
+
+        // Add y-axis
+        svg.append("g")
+            .call(d3.axisLeft(yScale))
+            .selectAll("text")
+            .style("font-size", "12px");
+
+        // Create the bars with animation
+        svg.selectAll(".bar")
+            .data(data)
+            .enter()
+            .append("rect")
+            .attr("class", "bar")
+            .attr("y", d => yScale(d.type))
+            .attr("height", yScale.bandwidth())
+            .attr("x", 0)
+            .attr("width", 0)  // Start with width 0 for animation
+            .attr("fill", d => d.color)
+            .attr("rx", 4)  // Rounded corners
+            .on("mouseover", function(event, d) {
+                tooltip.style("opacity", 1)
+                    .html(`${d.type}: ${d.value}%`)
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", function() {
+                tooltip.style("opacity", 0);
+            });
+
+        // Animate the bars
+        svg.selectAll(".bar")
+            .transition()
+            .duration(1000)
+            .delay((d, i) => i * 100)
+            .attr("width", d => xScale(d.value));
+
+        // Add values at the end of bars
+        svg.selectAll(".value")
+            .data(data)
+            .enter()
+            .append("text")
+            .attr("class", "value")
+            .attr("x", d => xScale(d.value) + 5)
+            .attr("y", d => yScale(d.type) + yScale.bandwidth() / 2)
+            .attr("dy", ".35em")
+            .style("font-size", "12px")
+            .style("fill", "#333")
+            .style("font-weight", "bold")
+            .text(d => d.value + "%")
+            .style("opacity", 0)  // Start invisible for animation
+            .transition()
+            .duration(1000)
+            .delay((d, i) => i * 100 + 500)
+            .style("opacity", 1);  // Fade in
+    </script>
+
+</body></html>
